@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_payments
+    description: payment data for customers
+    columns:
+      - name: payment_id
+        description: Primary key for stg_payments
+        tests: 
+          - unique
+          - not_null
+      - name: status
+        description: '{{doc("payment_status")}}'
+        tests:
+          - not_null
